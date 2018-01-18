@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>to do list</title>
+</head>
+<body>
+<h2>Todo js</h2>
+<input  id="todoinput"  type="text" name="todo">
+<button id="mybtn">送出</button>
+<ul id="result">
+	
+</ul>
+<script type="text/javascript">
+	var btnclick=document.getElementById('mybtn');
+	var resultctl=document.getElementById('result');
+	btnclick.addEventListener('click',function(){
+		var inputctl=document.getElementById('todoinput');
+		var licreate=document.createElement('LI');
+		licreate.innerHTML=inputctl.value+'<button>X</button>';
+		result.appendChild(licreate);
+		inputctl.value='';
+	});
+	resultctl.addEventListener('click',function(e){
+		e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+	});
+</script>
+</body>
+</html>
